@@ -3,7 +3,7 @@ console.log('HELLO');
 /*===== SCROLL REVEAL ANIMATION =====*/
 const sr = ScrollReveal({
     distance: '80px',
-    duration: 3000,
+    duration: 2000,
     reset: true,
 });
 
@@ -15,4 +15,4 @@ sr.reveal('.slogan__description', { origin: 'left' });
 sr.reveal('.rating__component', { origin: 'right', interval: 400 });
 
 // Review
-sr.reveal('.review__card', { origin: 'bottom', interval: 400, delay: 200 });
+sr.reveal('.review__card', { origin: 'bottom', interval: 400, delay: 150 });
