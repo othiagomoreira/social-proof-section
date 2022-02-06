@@ -14,36 +14,125 @@
   <!-- Css -->
   <link rel="stylesheet" href="./dist/style.css">
 
+  <!--===== SROLL REVEAL =====-->
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+  <!--===== SCRIPT =====-->
+  <script defer src="./dist/script.js"></script>
+
   <title>Frontend Mentor | Social proof section</title>
 
 
 </head>
 
 <body>
-  10,000+ of our users love our products.
+  <main class="container">
+    <section class="slogan">
+      <h1 class="slogan__title">
+        10,000+ of our users love our products.
+      </h1>
 
-  We only provide great products combined with excellent customer service.
-  See what our satisfied customers are saying about our services.
+      <p class="slogan__description">
+        We only provide great products combined with excellent customer service.
+        See what our satisfied customers are saying about our services.
+      </p>
+    </section>
 
-  Rated 5 Stars in Reviews
-  Rated 5 Stars in Report Guru
-  Rated 5 Stars in BestTech
+    <section class="rating">
+      <div class="rating__component">
+        <div class="rating__images">
+          <div class="rating__stars"></div>
+          <div class="rating__stars"></div>
+          <div class="rating__stars"></div>
+          <div class="rating__stars"></div>
+          <div class="rating__stars"></div>
+        </div>
 
-  Colton Smith
-  Verified Buyer
-  "We needed the same printed design as the one we had ordered a week prior.
-  Not only did they find the original order, but we also received it in time.
-  Excellent!"
+        <h4 class="rating__description">
+          Rated 5 Stars in Reviews
+        </h4>
+      </div>
 
-  Irene Roberts
-  Verified Buyer
-  "Customer service is always excellent and very quick turn around. Completely
-  delighted with the simplicity of the purchase and the speed of delivery."
+      <div class="rating__component">
+        <div class="rating__images">
+          <div class="rating__stars"></div>
+          <div class="rating__stars"></div>
+          <div class="rating__stars"></div>
+          <div class="rating__stars"></div>
+          <div class="rating__stars"></div>
+        </div>
 
-  Anne Wallace
-  Verified Buyer
-  "Put an order with this company and can only praise them for the very high
-  standard. Will definitely use them again and recommend them to everyone!"
+        <h4 class="rating__description">
+          Rated 5 Stars in Report Guru
+        </h4>
+      </div>
+
+      <div class="rating__component">
+        <div class="rating__images">
+          <div class="rating__stars"></div>
+          <div class="rating__stars"></div>
+          <div class="rating__stars"></div>
+          <div class="rating__stars"></div>
+          <div class="rating__stars"></div>
+        </div>
+
+        <h4 class="rating__description">
+          Rated 5 Stars in BestTech
+        </h4>
+      </div>
+    </section>
+
+    <section class="review">
+      <div class="review__card">
+        <div class="review__container">
+          <img class="review__photograph" src="images/image-colton.jpg" alt="photograph of Colton">
+
+          <div>
+            <h3 class="review__name">Colton Smith</h3>
+            <span class="review__verified">Verified Buyer</span>
+          </div>
+        </div>
+
+        <p class="review__description">
+          " We needed the same printed design as the one we had ordered a week prior. Not only did they find the
+          original
+          order, but we also received it in time. Excellent! "
+        </p>
+      </div>
+
+      <div class="review__card">
+        <div class="review__container">
+          <img class="review__photograph" src="images/image-irene.jpg" alt="photograph of Irene">
+
+          <div>
+            <h3 class="review__name">Irene Roberts</h3>
+            <span class="review__verified">Verified Buyer</span>
+          </div>
+        </div>
+
+        <p class="review__description">
+          " Customer service is always excellent and very quick turn around. Completely delighted with the simplicity of
+          the purchase and the speed of delivery. "
+        </p>
+      </div>
+
+      <div class="review__card">
+        <div class="review__container">
+          <img class="review__photograph" src="images/image-anne.jpg" alt="photograph of Anne">
+
+          <div>
+            <h3 class="review__name">Anne Wallace</h3>
+            <span class="review__verified">Verified Buyer</span>
+          </div>
+        </div>
+
+        <p class="review__description">
+          " Put an order with this company and can only praise them for the very high standard. Will definitely use them
+          again and recommend them to everyone! "
+        </p>
+      </div>
+    </section>
+  </main>
 </body>
 
 </html>

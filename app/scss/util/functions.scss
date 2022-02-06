@@ -1,6 +1,12 @@
-@use "sass:math";
+@use 'sass:math';
 
 // Source: https://css-tricks.com/snippets/sass/px-to-em-functions/
 @function rem($pixels, $context: 16) {
-	@return (math.div($pixels, $context)) * 1rem;
+    @return (math.div($pixels, $context)) * 1rem;
+}
+
+@mixin flex($direction, $position) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $position;
 }

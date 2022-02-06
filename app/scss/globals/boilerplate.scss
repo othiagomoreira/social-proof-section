@@ -1,3 +1,5 @@
+@use '../util' as *;
+
 html {
     font-size: 100%;
 }
@@ -6,4 +8,43 @@ html {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+body {
+    @include flex(row, center);
+    align-items: center;
+    min-height: 100vh;
+    padding: rem(80) 0;
+
+    font-family: var(--font-primary);
+    font-size: rem(15);
+
+    background: url(../images/bg-pattern-top-mobile.svg),
+        url(../images/bg-pattern-bottom-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: top left, bottom right;
+
+    @include breakpoint(medium) {
+        background: url(../images/bg-pattern-top-desktop.svg),
+            url(../images/bg-pattern-bottom-desktop.svg);
+
+        background-repeat: no-repeat;
+        background-position: top left, bottom right;
+    }
+
+    @include breakpoint(large) {
+        padding: rem(32);
+    }
+}
+
+main {
+    width: 90vw;
+    max-width: rem(700);
+    display: grid;
+    grid-template-columns: 100%;
+
+    @include breakpoint(large) {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: rem(1100);
+    }
 }

@@ -1,0 +1,63 @@
+@use '../util' as *;
+
+.review {
+    @include flex(column, initial);
+    gap: rem(20);
+
+    @include breakpoint(large) {
+        @include flex(row, initial);
+        grid-column: 1 / 3;
+        margin-top: rem(64);
+    }
+
+    &__card {
+        background-color: var(--color-primary);
+        padding: rem(32);
+        border-radius: rem(8);
+
+        @include breakpoint(large) {
+            width: 33%;
+        }
+
+        &:nth-child(2) {
+            @include breakpoint(large) {
+                transform: translateY(rem(24));
+            }
+        }
+
+        &:nth-child(3) {
+            @include breakpoint(large) {
+                transform: translateY(rem(48));
+            }
+        }
+    }
+
+    &__container {
+        @include flex(row, initial);
+        align-items: center;
+        gap: rem(24);
+        margin-bottom: rem(24);
+    }
+
+    &__photograph {
+        border-radius: 50%;
+        width: rem(40);
+    }
+
+    &__name {
+        color: var(--color-text-card);
+        line-height: 1.5;
+        font-size: rem(16);
+        font-weight: 500;
+    }
+
+    &__verified {
+        color: var(--color-verified);
+    }
+
+    &__description {
+        color: var(--color-text-card);
+        font-size: rem(13);
+        line-height: 1.7;
+    }
+}

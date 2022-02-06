@@ -1,0 +1,35 @@
+@use '../util' as *;
+
+.slogan {
+    @include breakpoint(large) {
+        max-width: rem(450);
+    }
+
+    &__title {
+        color: var(--color-primary);
+        text-align: center;
+        font-size: rem(32);
+        margin-bottom: rem(24);
+
+        @include breakpoint(medium) {
+            font-size: rem(48);
+        }
+
+        @include breakpoint(large) {
+            text-align: initial;
+            margin-bottom: rem(16);
+        }
+    }
+
+    &__description {
+        color: var(--color-featured);
+        text-align: center;
+        line-height: 1.5;
+        font-weight: 500;
+        letter-spacing: rem(-0.3);
+
+        @include breakpoint(large) {
+            text-align: initial;
+        }
+    }
+}

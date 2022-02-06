@@ -1,0 +1,62 @@
+@use '../util' as *;
+
+.rating {
+    @include flex(column, initial);
+    gap: rem(16);
+    padding: rem(48) 0;
+
+    @include breakpoint(large) {
+        padding: 0;
+    }
+
+    &__component {
+        @include flex(column, center);
+        align-items: center;
+        padding: rem(20) rem(32);
+        background-color: var(--color-bg-rating);
+        border-radius: rem(8);
+
+        @include breakpoint(medium) {
+            @include flex(row, initial);
+            width: 75%;
+        }
+
+        &:nth-child(2) {
+            @include breakpoint(medium) {
+                transform: translateX(rem(48));
+            }
+        }
+
+        &:nth-child(3) {
+            @include breakpoint(medium) {
+                transform: translateX(rem(92));
+            }
+        }
+    }
+
+    &__images {
+        @include flex(row, initial);
+        gap: rem(5);
+        margin-bottom: rem(16);
+
+        @include breakpoint(medium) {
+            margin-bottom: 0;
+            margin-right: rem(32);
+        }
+    }
+
+    &__stars {
+        background: url(/images/icon-star.svg) no-repeat;
+        height: rem(15);
+        width: rem(15);
+    }
+
+    &__description {
+        color: var(--color-primary);
+        text-align: center;
+
+        @include breakpoint(large) {
+            font-size: rem(12);
+        }
+    }
+}
